@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Приложение</title>
+    <script src="eel.js"></script>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1 class="title">Системная информация</h1>
+    <div class="window">
+        <div class="item">
+            <h2>Нагрузка на CPU</h2>
+            <div class="block">
+                <svg class="progress-ring" width="200" height="200">
+                <circle class="progress-ring__circle1" fill="transparent" stroke-width="15" r="85" cx="100" cy="100"/>
+                <text x="60" y="110" id="info1"><tspan id="cpu-info"></tspan>%</text>
+                </svg>
+            </div>
+        </div>
+        <div class="item">
+            <h2>Использование RAM</h2>
+            <div class="block">
+                <svg class="progress-ring" width="200" height="200">
+                <circle class="progress-ring__circle2" fill="transparent" stroke-width="15" r="85" cx="100" cy="100"/>
+                <text x="60" y="110" id="info2"><tspan id="memory-info"></tspan>%</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="additional-info">
+        <h2>Доп. информация:</h2>
+        <p class="additional-info__item">Свободное пространство на диске: <span id="disk-free"></span></p>
+        <p class="additional-info__item">Время работы компьютера: <span id="uptime"></span></p>
+        <p class="additional-info__item">Время работы процессора: <span id="time-on-cpu"></span></p>
+    </div>
+    <script src="/scripts.js"></script>
+</body>
+</html>
